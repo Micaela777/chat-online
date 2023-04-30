@@ -1,7 +1,6 @@
 {
   "name": "rooms-desafio",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "assert": "^2.0.0",
