@@ -1,10 +1,10 @@
 import firebase from "firebase";
 
 const app = firebase.initializeApp({
-    apiKey: "5HLyUAMFoL5DMrKTLfx2XpqRQDytIQdGm7sjvtr1",
-    databaseURL: "https://apx-dwf-m6-cc986-default-rtdb.firebaseio.com",
-    projectId: "apx-dwf-m6-cc986",
-    authDomain: "apx-dwf-m6-cc986.firebaseapp.com"
+    apiKey: process.env.API_KEY,
+    databaseURL: process.env.DATA_BASE_URL,
+    projectId: process.env.PROJECT_ID,
+    authDomain: process.env.AUTH_DOMAIN,
 });
 
 const rtdb = firebase.database();
