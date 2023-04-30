@@ -10,6 +10,7 @@ import { initLoginFormComponent } from "./components/login-form";
 import { initAuthenticationErrorComponent } from "./components/authentication-error";
 import { initAlertErrorComponent } from "./components/alert-error";
 import { initChatRoomImgComponent } from "./components/chatroom-img";
+import { initChatRoomHomeImgComponent } from "./components/chatroom-home-img";
 import "./pages/home";
 import  "./pages/register";
 import "./pages/log-in";
@@ -28,6 +29,7 @@ import { state } from "./state";
     initUserCreatedComponent();
     initLoginFormComponent();
     initAuthenticationErrorComponent();
-    initAlertErrorComponent()
+    initAlertErrorComponent();
     initChatRoomImgComponent(); 
+    initChatRoomHomeImgComponent(); 
 })();

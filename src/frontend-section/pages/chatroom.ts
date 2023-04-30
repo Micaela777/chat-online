@@ -1,4 +1,5 @@
 import { state } from "../state";
+import { Route, Router } from "@vaadin/router";
 
 type Message = {
     from: string,
@@ -48,6 +49,12 @@ class ChatroomPage extends HTMLElement{
                 state.pushMessage(target["new-message"].value);
               };
         }); 
+
+      const homeButton = this.querySelector(".home-button")
+      homeButton.addEventListener('click', (e)=> {
+          e.preventDefault()
+          Router.go("/")
+      })  
       
       const inputMessage = this.querySelector(".input-message") as HTMLElement;
       inputMessage.focus(); 
@@ -61,12 +68,15 @@ class ChatroomPage extends HTMLElement{
         this.innerHTML = `
           <div class="chatroom-container">
               <div class="chat-container">
-                  <div class="chat-header-section">
-                      <custom-chatroom-img></custom-chatroom-img>
-                      <div>
-                          <h3 class="room-id-reference">ID DE LA SALA</h3>
-                          <h3 class="id"></h3>
+                  <div class="chat-header">
+                      <div class="chat-header-section">
+                          <custom-chatroom-img></custom-chatroom-img>
+                          <div>
+                              <h3 class="room-id-reference">ID DE LA SALA</h3>
+                              <h3 class="id"></h3>
+                          </div>
                       </div>
+                      <custom-chatroom-home-img class="home-button"></custom-chatroom-home-img>
                   </div>
                   <div class="chat-section">
                       <div class="messages-container">
@@ -104,12 +114,23 @@ class ChatroomPage extends HTMLElement{
 
         const style = document.createElement("style");
         style.innerHTML = `
+        
                 .chatroom-container{
                    height: 100vh;
                    display: flex;
                    flex-direction: column;
                    align-items: center;
                    justify-content: center;
+                }
+
+                .chat-header{
+                  display:flex;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+
+                .home-button{
+                  margin-right: 20px;
                 }
 
                 .chat-header-section{
