@@ -9,4 +9,5 @@ const app = firebase.initializeApp({
 
 const rtdb = firebase.database();
 
+
 export { rtdb };
