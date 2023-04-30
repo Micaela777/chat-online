@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+ }
+
+ body{
+    margin: 0;
+    padding: 0;
+    background-image: radial-gradient(ellipse farthest-corner at 45px 30px , #1e1d39 73%, #18172c 50%);
+ }
+ 
+
+ .root{
+    height: 100vh;
+ }
